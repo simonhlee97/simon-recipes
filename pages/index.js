@@ -14,6 +14,8 @@ export async function getStaticProps() {
 		props: {
 			recipes: res.items,
 		},
+    revalidate: 20 // incremental static regeneration every (at most) 20 seconds
+
 	}
 }
 
